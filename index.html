@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My GitHub Pages Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embedded Framer Site</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <iframe src="https://bvcv.framer.website/" width="100%" height="600" style="border:none;"></iframe>
-
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is my website.</p>
+  <iframe 
+    src="https://bvcv.framer.website/" 
+    title="Embedded Framer Site" 
+    loading="eager" 
+    allowfullscreen>
+      Your browser does not support iframes.
+  </iframe>
 </body>
 </html>
