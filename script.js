@@ -1,43 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Function to toggle the visibility of content sections
-    const toggleSection = (button, contentId) => {
-        const content = document.getElementById(contentId);
-        if (!content) {
-            console.warn(`Content element with ID '${contentId}' not found.`);
-            return;
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all buttons with the data-toggle-target attribute
+    document.querySelectorAll('[data-toggle-target]').forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.dataset.toggleTarget;
+            const targetElement = document.getElementById(targetId);
 
-        const buttonSpan = button.querySelector('span'); // The text part of the button
-        const buttonSvg = button.querySelector('svg');   // The chevron icon part of the button
+            if (targetElement) {
+                targetElement.classList.toggle('hidden'); // Toggle the hidden class
 
-        const isCurrentlyHidden = content.classList.contains('hidden');
-        const isExperience = contentId === 'all-experience-content';
+                const span = this.querySelector('span');
+                const svg = this.querySelector('svg');
 
-        // Toggle visibility
-        content.classList.toggle('hidden');
-
-        // After toggling, update text and icon based on new visibility state:
-        const isNowHidden = content.classList.contains('hidden');
-
-        if (buttonSpan) {
-            buttonSpan.textContent = isNowHidden
-                ? isExperience ? 'Show more experience' : (button.dataset.showText || 'Show more')
-                : isExperience ? 'Show less experience' : (button.dataset.hideText || 'Show less');
-        }
-
-        if (buttonSvg) {
-            // Rotate icon: 90deg when expanded, 0deg when collapsed
-            buttonSvg.style.transform = isNowHidden ? 'rotate(0deg)' : 'rotate(90deg)';
-        }
-    };
-
-    // Attach event listeners to all buttons with data-toggle-target attribute
-    document.querySelectorAll('button[data-toggle-target]').forEach(button => {
-        const targetId = button.getAttribute('data-toggle-target');
-        if (targetId) {
-            button.addEventListener('click', () => {
-                toggleSection(button, targetId);
-            });
-        }
+                // Update button text and SVG rotation
+                if (targetElement.classList.contains('hidden')) {
+                    span.textContent = this.dataset.showText || 'Show more'; // Use data-show-text
+                    if (svg) {
+                        // For the main 'Show more experience' button's SVG path,
+                        // it should start as a down arrow and rotate up.
+                        // For individual 'Show more' buttons, it starts as a right arrow and rotates down.
+                        // We need to handle this based on the initial state of the SVG.
+                        // A simpler approach is to always toggle the rotation.
+                        svg.classList.remove('rotate-180');
+                    }
+                } else {
+                    span.textContent = this.dataset.hideText || 'Show less'; // Use data-hide-text
+                    if (svg) {
+                        svg.classList.add('rotate-180');
+                    }
+                }
+            }
+        });
     });
 });
