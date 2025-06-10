@@ -172,8 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCarousel('languages-carousel', 6);    // Example: show 6 language logos at once
 
     // --- End of Carousel Initialization Code ---
-
-});
+    // Add this code inside your existing document.addEventListener('DOMContentLoaded', function() { ... }); block
 
 // --- Mobile Menu Toggle ---
 const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -206,4 +205,5 @@ window.addEventListener('resize', function() {
             closeMobileMenu();
         }
     }
+});
 });
