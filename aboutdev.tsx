@@ -29,9 +29,9 @@ export default function AboutDeveloper() {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({})
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => ({
+    setExpandedSections((prev) => ({
       ...prev,
-      [section]: !prev[section]
+      [section]: !prev[section],
     }))
   }
 
@@ -40,7 +40,7 @@ export default function AboutDeveloper() {
       {/* Navigation */}
       <nav className="flex justify-between items-center p-6 backdrop-blur-sm border-b border-zinc-800">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          BVDW
+          BenVDW
         </div>
         <div className="flex gap-8">
           <Link href="/" className="text-white hover:text-blue-400 transition-colors duration-300">
@@ -74,7 +74,7 @@ export default function AboutDeveloper() {
             <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Ben Van Der Weerd
             </h1>
-            <p className="text-xl text-blue-400 mb-4">Cyber Security Engineering Student | Consultant & Analyst</p>
+            <p className="text-xl text-blue-400 mb-4">Cyber Security Engineering Student</p>
             <div className="flex items-center gap-2 text-gray-400 mb-8">
               <MapPin className="w-4 h-4" />
               <span>Wellington, New Zealand</span>
@@ -107,24 +107,27 @@ export default function AboutDeveloper() {
             <CardContent className="p-8">
               <div className="text-gray-300 space-y-4 text-lg leading-relaxed">
                 <p>
-                  As an internationally educated student pursuing a Bachelor of Cybersecurity Engineering (Honours) at VUW, 
-                  I bring a unique blend of technical expertise, crisis management, and people-first communication to every 
-                  challenge I face.
+                  As an internationally educated student pursuing a Bachelor of Cybersecurity Engineering (Honours) at
+                  VUW, I bring a unique blend of technical expertise, crisis management, and people-first communication
+                  to every challenge I face.
                 </p>
                 <p>
-                  My background spans across cybersecurity, emergency management, first aid, and customer service—including 
-                  frontline roles at McDonald's, where I honed my skills in high-pressure environments and learned to manage 
-                  complex situations with professionalism and empathy. Whether it's de-escalating difficult customer interactions 
-                  or handling critical incidents, I thrive in high-stress environments that demand quick thinking and clear communication.
+                  My background spans across cybersecurity, emergency management, first aid, and customer
+                  service—including frontline roles at McDonald's, where I honed my skills in high-pressure environments
+                  and learned to manage complex situations with professionalism and empathy. Whether it's de-escalating
+                  difficult customer interactions or handling critical incidents, I thrive in high-stress environments
+                  that demand quick thinking and clear communication.
                 </p>
                 <p>
-                  Combining my cybersecurity studies with hands-on experience in triaging and incident response, I'm passionate 
-                  about solving problems under pressure, leading teams through difficult situations, and breaking down complex 
-                  issues "pinboard and string style"—tracing problems back to their roots to better understand, respond, and resolve.
+                  Combining my cybersecurity studies with hands-on experience in triaging and incident response, I'm
+                  passionate about solving problems under pressure, leading teams through difficult situations, and
+                  breaking down complex issues "pinboard and string style"—tracing problems back to their roots to
+                  better understand, respond, and resolve.
                 </p>
                 <p>
-                  I'm a continuous learner and natural investigator, Whether I'm speaking with a client, team member, or stakeholder, 
-                  I prioritize clear, thoughtful communication as a critical tool for effective collaboration and success.
+                  I'm a continuous learner and natural investigator, Whether I'm speaking with a client, team member, or
+                  stakeholder, I prioritize clear, thoughtful communication as a critical tool for effective
+                  collaboration and success.
                 </p>
               </div>
             </CardContent>
@@ -170,7 +173,8 @@ export default function AboutDeveloper() {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-3">
-                    Promoted to Fully Qualified manager overseeing Full shifts and consulting on areas for restaurant improvement
+                    Promoted to Fully Qualified manager overseeing Full shifts and consulting on areas for restaurant
+                    improvement
                   </p>
                   <ul className="text-gray-400 space-y-1">
                     <li className="flex items-start gap-2">
@@ -203,7 +207,8 @@ export default function AboutDeveloper() {
                     </div>
                   </div>
                   <p className="text-gray-300">
-                    Expanding skills from being a crew trainer, up-skilling in people management and business continuity skills
+                    Expanding skills from being a crew trainer, up-skilling in people management and business continuity
+                    skills
                   </p>
                 </div>
 
@@ -218,28 +223,32 @@ export default function AboutDeveloper() {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-3">
-                    Progressed from Crew Member to Crew Trainer within 7 months, recognized for fast learning and strong leadership
+                    Progressed from Crew Member to Crew Trainer within 7 months, recognized for fast learning and strong
+                    leadership
                   </p>
                   {expandedSections["mcdonalds"] && (
                     <div className="text-gray-400 space-y-1 animate-in slide-in-from-top duration-300">
                       <li className="flex items-start gap-2">
                         <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                        Trained and led teams across all restaurant sectors, including front counter, drive-thru, kitchen, and customer service
+                        Trained and led teams across all restaurant sectors, including front counter, drive-thru,
+                        kitchen, and customer service
                       </li>
                       <li className="flex items-start gap-2">
                         <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                        Built skills in customer experience management, conflict resolution, and fast-paced teamwork under pressure
+                        Built skills in customer experience management, conflict resolution, and fast-paced teamwork
+                        under pressure
                       </li>
                       <li className="flex items-start gap-2">
                         <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                        Praised for eagerness to learn and adaptability: "Picking up new things with ease—love your enthusiasm for learning!" – Celina (Restaurant Manager)
+                        Praised for eagerness to learn and adaptability: "Picking up new things with ease—love your
+                        enthusiasm for learning!" – Celina (Restaurant Manager)
                       </li>
                     </div>
                   )}
                   {!expandedSections["mcdonalds"] && (
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                       onClick={() => toggleSection("mcdonalds")}
                     >
@@ -247,9 +256,9 @@ export default function AboutDeveloper() {
                     </Button>
                   )}
                   {expandedSections["mcdonalds"] && (
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                       onClick={() => toggleSection("mcdonalds")}
                     >
@@ -270,7 +279,9 @@ export default function AboutDeveloper() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                       <div>
-                        <h3 className="text-xl font-semibold text-white">Team Lead: Incident Response and Continuity</h3>
+                        <h3 className="text-xl font-semibold text-white">
+                          Team Lead: Incident Response and Continuity
+                        </h3>
                         <p className="text-blue-400 font-medium">Project Kororā</p>
                       </div>
                       <div className="flex items-center gap-2 text-gray-400 text-sm">
@@ -279,7 +290,8 @@ export default function AboutDeveloper() {
                       </div>
                     </div>
                     <p className="text-gray-300 mb-3">
-                      Heading a team of experts on maintaining and monitoring the development of Victoria University of Wellington's first satellite project
+                      Heading a team of experts on maintaining and monitoring the development of Victoria University of
+                      Wellington's first satellite project
                     </p>
                     <div className="text-gray-400">
                       <p className="font-medium mb-2">Key responsibilities:</p>
@@ -314,9 +326,9 @@ export default function AboutDeveloper() {
                         </ul>
                       )}
                       {!expandedSections["korora"] && (
-                        <Button 
-                          variant="ghost" 
-                          size="sm" 
+                        <Button
+                          variant="ghost"
+                          size="sm"
                           className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                           onClick={() => toggleSection("korora")}
                         >
@@ -324,9 +336,9 @@ export default function AboutDeveloper() {
                         </Button>
                       )}
                       {expandedSections["korora"] && (
-                        <Button 
-                          variant="ghost" 
-                          size="sm" 
+                        <Button
+                          variant="ghost"
+                          size="sm"
                           className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                           onClick={() => toggleSection("korora")}
                         >
@@ -358,38 +370,50 @@ export default function AboutDeveloper() {
                       </div>
                     </div>
                     <p className="text-gray-300 mb-3">
-                      Re-contracted in Jan 25 as a core Member for the ROS committee, as the only Undergraduate representative
+                      Re-contracted in Jan 25 as a core Member for the ROS committee, as the only Undergraduate
+                      representative
                     </p>
                     <ul className="text-gray-400 space-y-1">
                       <li className="flex items-start gap-2">
                         <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                        Serve as a consultant and committee member within two national research commercialization programmes
+                        Serve as a consultant and committee member within two national research commercialization
+                        programmes
                       </li>
                       <li className="flex items-start gap-2">
                         <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                        Collaborate with a diverse, multidisciplinary team to assess, advise, and support commercialisation
+                        Collaborate with a diverse, multidisciplinary team to assess, advise, and support
+                        commercialisation
                       </li>
                     </ul>
                     {expandedSections["uniservices"] && (
                       <ul className="space-y-1 mt-2 animate-in slide-in-from-top duration-300">
                         <li className="flex items-start gap-2">
                           <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                          Provide cybersecurity and digital communications insight to universities, research institutions, and private companies
+                          <span className="text-white">
+                            Provide cybersecurity and digital communications insight to universities, research
+                            institutions, and private companies
+                          </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                          Contribute to the evaluation of early-stage research, helping shape investment and commercialisation strategies
+                          <span className="text-white">
+                            Contribute to the evaluation of early-stage research, helping shape investment and
+                            commercialisation strategies
+                          </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                          Assist in aligning emerging technologies with market needs, ensuring technical feasibility, security, and strategic direction
+                          <span className="text-white">
+                            Assist in aligning emerging technologies with market needs, ensuring technical feasibility,
+                            security, and strategic direction
+                          </span>
                         </li>
                       </ul>
                     )}
                     {!expandedSections["uniservices"] && (
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                         onClick={() => toggleSection("uniservices")}
                       >
@@ -397,9 +421,9 @@ export default function AboutDeveloper() {
                       </Button>
                     )}
                     {expandedSections["uniservices"] && (
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                         onClick={() => toggleSection("uniservices")}
                       >
@@ -430,7 +454,8 @@ export default function AboutDeveloper() {
                       </div>
                     </div>
                     <p className="text-gray-300 mb-3">
-                      Lead the Victoria Security Engineering Club (VSEC), Serve as an Executive Committee Member for VEC, Represent VSEC on the VUW STEM Committee
+                      Lead the Victoria Security Engineering Club (VSEC), Serve as an Executive Committee Member for
+                      VEC, Represent VSEC on the VUW STEM Committee
                     </p>
                     <ul className="text-gray-400 space-y-1">
                       <li className="flex items-start gap-2">
@@ -439,7 +464,8 @@ export default function AboutDeveloper() {
                       </li>
                       <li className="flex items-start gap-2">
                         <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                        Deliver and lead educational courses such as ASD EXP, ISC2's Certified in Cybersecurity (CC), and more
+                        Deliver and lead educational courses such as ASD EXP, ISC2's Certified in Cybersecurity (CC),
+                        and more
                       </li>
                     </ul>
                     {expandedSections["vec"] && (
@@ -450,14 +476,15 @@ export default function AboutDeveloper() {
                         </li>
                         <li className="flex items-start gap-2">
                           <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                          Manage, identify, and report on security risks across VEC and all affiliated daughter/sister clubs
+                          Manage, identify, and report on security risks across VEC and all affiliated daughter/sister
+                          clubs
                         </li>
                       </ul>
                     )}
                     {!expandedSections["vec"] && (
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                         onClick={() => toggleSection("vec")}
                       >
@@ -465,9 +492,9 @@ export default function AboutDeveloper() {
                       </Button>
                     )}
                     {expandedSections["vec"] && (
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                         onClick={() => toggleSection("vec")}
                       >
@@ -481,8 +508,8 @@ export default function AboutDeveloper() {
 
             {/* Show More Experience Button */}
             {!expandedSections["moreExperience"] && (
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full border-blue-400/20 text-blue-400 hover:bg-blue-400/10"
                 onClick={() => toggleSection("moreExperience")}
               >
@@ -552,12 +579,14 @@ export default function AboutDeveloper() {
                           </div>
                         </div>
                         <p className="text-gray-300 mb-3">
-                          Analyzed digital communication data and developed strategies that improved the MacDiarmid Institute's online presence
+                          Analyzed digital communication data and developed strategies that improved the MacDiarmid
+                          Institute's online presence
                         </p>
                         <ul className="text-gray-400 space-y-1">
                           <li className="flex items-start gap-2">
                             <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                            Key platforms included Facebook/Meta, Instagram, LinkedIn, Twitter/X, Google Adsense/Analytics
+                            Key platforms included Facebook/Meta, Instagram, LinkedIn, Twitter/X, Google
+                            Adsense/Analytics
                           </li>
                           <li className="flex items-start gap-2">
                             <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
@@ -596,7 +625,8 @@ export default function AboutDeveloper() {
                           </div>
                         </div>
                         <p className="text-gray-300 mb-3">
-                          Founded and led a 12-person cybersecurity and digital operations team, launched through the Young Enterprise Scheme (YES)
+                          Founded and led a 12-person cybersecurity and digital operations team, launched through the
+                          Young Enterprise Scheme (YES)
                         </p>
                         <ul className="text-gray-400 space-y-1">
                           <li className="flex items-start gap-2">
@@ -676,7 +706,8 @@ export default function AboutDeveloper() {
                           </div>
                         </div>
                         <p className="text-gray-300 mb-3">
-                          Ran and managed a live-streaming channel with ~6 million content impressions and ~2 million total views
+                          Ran and managed a live-streaming channel with ~6 million content impressions and ~2 million
+                          total views
                         </p>
                         <ul className="text-gray-400 space-y-1">
                           <li className="flex items-start gap-2">
@@ -685,7 +716,8 @@ export default function AboutDeveloper() {
                           </li>
                           <li className="flex items-start gap-2">
                             <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
-                            Led a small digital team, coordinated moderation efforts, and oversaw all administrative tasks
+                            Led a small digital team, coordinated moderation efforts, and oversaw all administrative
+                            tasks
                           </li>
                           <li className="flex items-start gap-2">
                             <ChevronRight className="w-4 h-4 mt-0.5 text-blue-400" />
@@ -697,8 +729,8 @@ export default function AboutDeveloper() {
                   </CardContent>
                 </Card>
 
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full border-blue-400/20 text-blue-400 hover:bg-blue-400/10"
                   onClick={() => toggleSection("moreExperience")}
                 >
@@ -737,9 +769,7 @@ export default function AboutDeveloper() {
                         projectkorora.space <ExternalLink className="w-3 h-3" />
                       </Link>
                     </p>
-                    <p className="text-gray-300 mb-3">
-                      Victoria University of Wellington's first satellite project
-                    </p>
+                    <p className="text-gray-300 mb-3">Victoria University of Wellington's first satellite project</p>
                   </div>
                 </div>
               </CardContent>
@@ -760,7 +790,8 @@ export default function AboutDeveloper() {
                       </div>
                     </div>
                     <p className="text-gray-300 mb-3">
-                      Managed and optimized a network of 15 devices, including 3 servers, 5 tower PCs, and 7 laptops running a mix of Windows, macOS, and Linux
+                      Managed and optimized a network of 15 devices, including 3 servers, 5 tower PCs, and 7 laptops
+                      running a mix of Windows, macOS, and Linux
                     </p>
                     <div className="text-gray-400">
                       <p className="font-medium mb-2">Technologies mastered:</p>
@@ -811,9 +842,9 @@ export default function AboutDeveloper() {
                         </div>
                       )}
                       {!expandedSections["homeNetwork"] && (
-                        <Button 
-                          variant="ghost" 
-                          size="sm" 
+                        <Button
+                          variant="ghost"
+                          size="sm"
                           className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                           onClick={() => toggleSection("homeNetwork")}
                         >
@@ -821,9 +852,9 @@ export default function AboutDeveloper() {
                         </Button>
                       )}
                       {expandedSections["homeNetwork"] && (
-                        <Button 
-                          variant="ghost" 
-                          size="sm" 
+                        <Button
+                          variant="ghost"
+                          size="sm"
                           className="text-blue-400 hover:text-blue-300 p-0 mt-2"
                           onClick={() => toggleSection("homeNetwork")}
                         >
@@ -889,9 +920,7 @@ export default function AboutDeveloper() {
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                      <h3 className="text-xl font-semibold text-white">
-                        NCEA Level 2,3 & UE, Various
-                      </h3>
+                      <h3 className="text-xl font-semibold text-white">NCEA Level 2,3 & UE, Various</h3>
                       <div className="flex items-center gap-2 text-gray-400 text-sm">
                         <Calendar className="w-4 h-4" />
                         <span>February 2023 - November 2023</span>
@@ -1008,8 +1037,8 @@ export default function AboutDeveloper() {
                   "Administration",
                   "Business Continuity",
                 ].map((skill) => (
-                  <div 
-                    key={skill} 
+                  <div
+                    key={skill}
                     className="p-3 bg-zinc-800/50 rounded-lg text-white text-center hover:bg-zinc-700/50 transition-colors duration-300"
                   >
                     {skill}
@@ -1020,9 +1049,7 @@ export default function AboutDeveloper() {
               <div className="mt-8">
                 <h3 className="text-xl font-semibold mb-4">Languages</h3>
                 <div className="flex items-center gap-3">
-                  <div className="p-3 bg-zinc-800/50 rounded-lg text-white">
-                    English - Fluent
-                  </div>
+                  <div className="p-3 bg-zinc-800/50 rounded-lg text-white">English - Fluent</div>
                 </div>
               </div>
             </CardContent>
@@ -1069,5 +1096,10 @@ export default function AboutDeveloper() {
                   </div>
                 </div>
               </div>
-
-              <div\
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    </div>
+  )
+}
