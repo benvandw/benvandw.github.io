@@ -174,3 +174,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- End of Carousel Initialization Code ---
 
 });
+
+// --- Mobile Menu Toggle ---
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+        // Toggle the 'hidden' class for basic visibility
+        mobileMenu.classList.toggle('hidden');
+        // Toggle the transform class for the slide-in/out effect
+        mobileMenu.classList.toggle('-translate-x-full');
+        // Optionally, toggle body overflow to prevent scrolling when menu is open
+        document.body.classList.toggle('overflow-hidden');
+    });
+}
+
+// Function to close mobile menu (called when a menu link is clicked)
+window.closeMobileMenu = function() {
+    if (mobileMenu) {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.add('-translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+    }
+};
+
+// Optional: Close menu if screen resized from mobile to desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) { // 768px is Tailwind's 'md' breakpoint by default
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            closeMobileMenu();
+        }
+    }
+});
