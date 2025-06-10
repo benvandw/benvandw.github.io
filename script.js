@@ -31,39 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all buttons with the data-toggle-target attribute
-    document.querySelectorAll('[data-toggle-target]').forEach(button => {
-        button.addEventListener('click', function() {
-            const targetId = this.dataset.toggleTarget;
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                // Toggle the 'hidden' class on the target element
-                targetElement.classList.toggle('hidden');
-
-                // Get the span for text and the SVG for icon rotation
-                const span = this.querySelector('span');
-                const svg = this.querySelector('svg');
-
-                // Determine the current state and update text/icon accordingly
-                if (targetElement.classList.contains('hidden')) {
-                    // Content is now hidden, so button should say "Show more"
-                    span.textContent = this.dataset.showText || 'Show more';
-                    if (svg) {
-                        svg.classList.remove('rotate-180'); // Reset rotation (point right/down)
-                    }
-                } else {
-                    // Content is now visible, so button should say "Show less"
-                    span.textContent = this.dataset.hideText || 'Show less';
-                    if (svg) {
-                        svg.classList.add('rotate-180'); // Apply rotation (point left/up)
-                    }
-                }
-            }
-        });
-    });
 
     // --- Start of Carousel Initialization Code ---
 
@@ -104,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-
         function updateCarousel() {
             const offset = -currentIndex * (100 / totalSlides);
             track.style.transform = `translateX(${offset}%)`;
@@ -124,21 +90,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
-            updateCarousel();
-        });
+        if (prevBtn) { // Add null checks for buttons as well
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+                updateCarousel();
+            });
+        }
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
-            updateCarousel();
-        });
+        if (nextBtn) { // Add null checks for buttons as well
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+                updateCarousel();
+            });
+        }
+
 
         // Auto-rotate functionality
         function startAutoRotate() {
             if (autoRotate && totalSlides > 1) { // Only auto-rotate if there's more than one slide
                 autoRotateInterval = setInterval(() => {
-                    nextBtn.click();
+                    if (nextBtn) { // Ensure nextBtn exists before clicking
+                        nextBtn.click();
+                    }
                 }, intervalTime);
             }
         }
@@ -148,8 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Pause auto-rotate on hover
-        carouselContainer.addEventListener('mouseenter', stopAutoRotate);
-        carouselContainer.addEventListener('mouseleave', startAutoRotate);
+        if (carouselContainer) { // Ensure container exists
+            carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+            carouselContainer.addEventListener('mouseleave', startAutoRotate);
+        }
 
 
         // Initialize on load
@@ -173,4 +148,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- End of Carousel Initialization Code ---
 
-});
+}); // This is the *only* closing brace for the DOMContentLoaded listener.
