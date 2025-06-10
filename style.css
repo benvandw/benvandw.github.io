@@ -1,0 +1,29 @@
+/*
+   This file contains minimal custom CSS.
+   The majority of the styling is handled by Tailwind CSS classes directly in the HTML.
+   Ensure you include the Tailwind CSS CDN in your index.html or compile Tailwind locally.
+*/
+
+/* Basic body styling for full height and font */
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom hidden class for JavaScript toggling */
+.hidden {
+    display: none;
+}
+
+/* Ensure list items for skills and detailed experience/projects don't have default bullets */
+.text-gray-400.space-y-1 li {
+    list-style: none;
+}
+
+/* Styling for the nav links on hover - as Tailwind classes are used, this is more for example */
+nav a:hover {
+    /* The Tailwind classes on the HTML elements should handle this (hover:text-blue-400) */
+}
+
+/* You might add more custom styles here if needed, overriding or extending Tailwind */
