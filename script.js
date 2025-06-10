@@ -6,26 +6,25 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                targetElement.classList.toggle('hidden'); // Toggle the hidden class
+                // Toggle the 'hidden' class on the target element
+                targetElement.classList.toggle('hidden');
 
+                // Get the span for text and the SVG for icon rotation
                 const span = this.querySelector('span');
                 const svg = this.querySelector('svg');
 
-                // Update button text and SVG rotation
+                // Determine the current state and update text/icon accordingly
                 if (targetElement.classList.contains('hidden')) {
-                    span.textContent = this.dataset.showText || 'Show more'; // Use data-show-text
+                    // Content is now hidden, so button should say "Show more"
+                    span.textContent = this.dataset.showText || 'Show more';
                     if (svg) {
-                        // For the main 'Show more experience' button's SVG path,
-                        // it should start as a down arrow and rotate up.
-                        // For individual 'Show more' buttons, it starts as a right arrow and rotates down.
-                        // We need to handle this based on the initial state of the SVG.
-                        // A simpler approach is to always toggle the rotation.
-                        svg.classList.remove('rotate-180');
+                        svg.classList.remove('rotate-180'); // Reset rotation (point right/down)
                     }
                 } else {
-                    span.textContent = this.dataset.hideText || 'Show less'; // Use data-hide-text
+                    // Content is now visible, so button should say "Show less"
+                    span.textContent = this.dataset.hideText || 'Show less';
                     if (svg) {
-                        svg.classList.add('rotate-180');
+                        svg.classList.add('rotate-180'); // Apply rotation (point left/up)
                     }
                 }
             }
