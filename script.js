@@ -1,39 +1,6 @@
 // JS for index.html
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all buttons with the data-toggle-target attribute
-    document.querySelectorAll('[data-toggle-target]').forEach(button => {
-        button.addEventListener('click', function() {
-            const targetId = this.dataset.toggleTarget;
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                // Toggle the 'hidden' class on the target element
-                targetElement.classList.toggle('hidden');
-
-                // Get the span for text and the SVG for icon rotation
-                const span = this.querySelector('span');
-                const svg = this.querySelector('svg');
-
-                // Determine the current state and update text/icon accordingly
-                if (targetElement.classList.contains('hidden')) {
-                    // Content is now hidden, so button should say "Show more"
-                    span.textContent = this.dataset.showText || 'Show more';
-                    if (svg) {
-                        svg.classList.remove('rotate-180'); // Reset rotation (point right/down)
-                    }
-                } else {
-                    // Content is now visible, so button should say "Show less"
-                    span.textContent = this.dataset.hideText || 'Show less';
-                    if (svg) {
-                        svg.classList.add('rotate-180'); // Apply rotation (point left/up)
-                    }
-                }
-            }
-        });
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all buttons with the data-toggle-target attribute
+    // --- Show More/Less Toggle functionality ---
     document.querySelectorAll('[data-toggle-target]').forEach(button => {
         button.addEventListener('click', function() {
             const targetId = this.dataset.toggleTarget;
@@ -82,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let currentIndex = 0;
         const totalItems = items.length;
-        const totalSlides = Math.ceil(totalItems / itemsPerSlide);
+        // Ensure totalSlides is at least 1 to avoid division by zero if there are no items
+        const totalSlides = Math.max(1, Math.ceil(totalItems / itemsPerSlide));
         let autoRotateInterval;
 
         // Ensure each item has the correct width
@@ -124,21 +92,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
-            updateCarousel();
-        });
+        // Add null checks for buttons before adding event listeners
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+                updateCarousel();
+            });
+        }
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
-            updateCarousel();
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+                updateCarousel();
+            });
+        }
 
         // Auto-rotate functionality
         function startAutoRotate() {
             if (autoRotate && totalSlides > 1) { // Only auto-rotate if there's more than one slide
                 autoRotateInterval = setInterval(() => {
-                    nextBtn.click();
+                    if (nextBtn) { // Ensure nextBtn exists before attempting to click
+                        nextBtn.click();
+                    }
                 }, intervalTime);
             }
         }
@@ -148,9 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Pause auto-rotate on hover
-        carouselContainer.addEventListener('mouseenter', stopAutoRotate);
-        carouselContainer.addEventListener('mouseleave', startAutoRotate);
-
+        if (carouselContainer) { // Ensure container exists before adding event listeners
+            carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+            carouselContainer.addEventListener('mouseleave', startAutoRotate);
+        }
 
         // Initialize on load
         updateCarousel();
@@ -172,38 +148,41 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCarousel('languages-carousel', 6);    // Example: show 6 language logos at once
 
     // --- End of Carousel Initialization Code ---
-    // Add this code inside your existing document.addEventListener('DOMContentLoaded', function() { ... }); block
 
-// --- Mobile Menu Toggle ---
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
 
-if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', function() {
-        // Toggle the 'hidden' class for basic visibility
-        mobileMenu.classList.toggle('hidden');
-        // Toggle the transform class for the slide-in/out effect
-        mobileMenu.classList.toggle('-translate-x-full');
-        // Optionally, toggle body overflow to prevent scrolling when menu is open
-        document.body.classList.toggle('overflow-hidden');
-    });
-}
+    // --- Mobile Menu Toggle functionality ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-// Function to close mobile menu (called when a menu link is clicked)
-window.closeMobileMenu = function() {
-    if (mobileMenu) {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.add('-translate-x-full');
-        document.body.classList.remove('overflow-hidden');
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            // Toggle the 'hidden' class for basic visibility
+            mobileMenu.classList.toggle('hidden');
+            // Toggle the transform class for the slide-in/out effect
+            mobileMenu.classList.toggle('-translate-x-full');
+            // Optionally, toggle body overflow to prevent scrolling when menu is open
+            document.body.classList.toggle('overflow-hidden');
+        });
     }
-};
 
-// Optional: Close menu if screen resized from mobile to desktop
-window.addEventListener('resize', function() {
-    if (window.innerWidth >= 768) { // 768px is Tailwind's 'md' breakpoint by default
-        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-            closeMobileMenu();
+    // Function to close mobile menu (called from HTML onclick attributes)
+    window.closeMobileMenu = function() {
+        if (mobileMenu) {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.add('-translate-x-full');
+            document.body.classList.remove('overflow-hidden');
         }
-    }
-});
-});
+    };
+
+    // Optional: Close menu if screen resized from mobile to desktop
+    window.addEventListener('resize', function() {
+        // 768px is Tailwind's 'md' breakpoint by default
+        if (window.innerWidth >= 768) {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+            }
+        }
+    });
+    // --- End of Mobile Menu Toggle Code ---
+
+}); // This is the ONLY closing brace for the entire DOMContentLoaded listener.
