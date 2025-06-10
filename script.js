@@ -1,3 +1,4 @@
+// JS for index.html
 document.addEventListener('DOMContentLoaded', function() {
     // Select all buttons with the data-toggle-target attribute
     document.querySelectorAll('[data-toggle-target]').forEach(button => {
