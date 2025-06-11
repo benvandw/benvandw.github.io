@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Start of Carousel Initialization Code ---
+    // --- Start of Carousel Code ---
 
     function initializeCarousel(containerId, itemsPerSlide = 4, autoRotate = true, intervalTime = 5000) {
         const carouselContainer = document.getElementById(containerId);
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let currentIndex = 0;
         const totalItems = items.length;
-        // Ensure totalSlides is at least 1 to avoid division by zero if there are no items
+        // totalSlides is at least 1 or div by 0
         const totalSlides = Math.max(1, Math.ceil(totalItems / itemsPerSlide));
         let autoRotateInterval;
 
@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 indicatorsContainer.appendChild(dot);
             }
         }
-
 
         function updateCarousel() {
             const offset = -currentIndex * (100 / totalSlides);
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- End of Carousel Initialization Code ---
 
 
-    // --- Mobile Menu Toggle functionality ---
+    // --- Mobile Hamburger  Menu Toggle functionality ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -185,4 +184,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     // --- End of Mobile Menu Toggle Code ---
 
-}); // This is the ONLY closing brace for the entire DOMContentLoaded listener.
+});
