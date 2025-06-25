@@ -1,8 +1,6 @@
 ---
-Title: benvandw.github.io
-
-Description: This repository hosts the code for my personal portfolio website, built using **HTML**, **CSS**, and **JavaScript**. This site serves as a showcase for my projects, skills, and experience, providing an interactive and informative platform for visitors to learn more about my work.
-
+title: "benvandw.github.io"
+description: "This repository hosts the code for my personal portfolio website, built using **HTML**, **CSS**, and **JavaScript**. This site serves as a showcase for my projects, skills, and experience, providing an interactive and informative platform for visitors to learn more about my work."
 ---
 
 ### Live Demo
