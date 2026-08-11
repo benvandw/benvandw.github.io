@@ -134,23 +134,19 @@ blockquote {
   .timeline-entry::before { background: #8ab4f8; }
 }
 
-/* Hero: full-width dark "space" banner with a small earth-limb
-   curve in the bottom-left, breaking out of the content column.
-   Always dark regardless of light/dark mode — it's a fixed
-   graphic, not a themed surface. */
-.hero {
+hero {
   position: relative;
   left: 50%;
   width: 100vw;
   margin-left: -50vw;
   margin-top: -40px;
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
   background: #07070a;
-  height: 240px;
+  height: 150px;
   overflow: hidden;
   box-sizing: border-box;
 }
-
+ 
 .hero-inner {
   max-width: 700px;
   margin: 0 auto;
@@ -158,42 +154,31 @@ blockquote {
   position: relative;
   z-index: 2;
 }
-
+ 
 .hero nav a {
   color: #f2e9d8;
 }
-
+ 
 .hero-text {
-  margin-top: 60px;
+  margin-top: 24px;
 }
-
+ 
 .hero-text h1 {
   color: #f2e9d8;
-  font-size: 1.8em;
+  font-size: 1.7em;
   margin: 0;
 }
-
-.earthrise {
+ 
+.starfield {
   position: absolute;
   inset: 0;
 }
-
-.earthrise .star {
+ 
+.starfield .star {
   position: absolute;
   width: 2px;
   height: 2px;
   background: #ffffff;
   opacity: 0.5;
   border-radius: 50%;
-}
-
-.earthrise .earth {
-  position: absolute;
-  bottom: -100px;
-  left: -70px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: #0c2a4a;
-  border: 2px solid #4a7fad;
 }
