@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-
+# Hey, I'm Ben
 I'm a cybersecurity engineering student and Researcher in Wellington, New Zealand,
 currently working on satellite security — I'm Deputy Director of
 [Project Kororā](https://projectkorora.space), VUW's first student-led CubeSat
