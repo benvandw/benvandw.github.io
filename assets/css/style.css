@@ -12,6 +12,7 @@ body {
   font-size: 18px;
   color: #222;
   background: #fff;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,17 +78,20 @@ footer {
   font-size: 0.85em;
   color: #767676;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 blockquote {
   border-left: 3px solid #ccc;
   margin-left: 0;
   padding-left: 1em;
   color: #555;
 }
+
 /* Timeline (events page) */
 .timeline {
   border-left: 2px solid #ccc;
@@ -129,21 +133,44 @@ blockquote {
   .timeline { border-left-color: #333; }
   .timeline-entry::before { background: #8ab4f8; }
 }
-/* Hero: dark "space" panel with a small earth-limb curve
-   tucked into the bottom-left corner. */
+
+/* Hero: full-width dark "space" banner with a small earth-limb
+   curve in the bottom-left, breaking out of the content column.
+   Always dark regardless of light/dark mode — it's a fixed
+   graphic, not a themed surface. */
 .hero {
-  background: #07070a;
-  margin: -40px -20px 2em;
-  padding: 24px 20px;
-  height: 200px;
   position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-top: -40px;
+  margin-bottom: 2.5em;
+  background: #07070a;
+  height: 240px;
   overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px 20px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .hero nav a {
   color: #f2e9d8;
-  position: relative;
-  z-index: 2;
+}
+
+.hero-text {
+  margin-top: 60px;
+}
+
+.hero-text h1 {
+  color: #f2e9d8;
+  font-size: 1.8em;
+  margin: 0;
 }
 
 .earthrise {
