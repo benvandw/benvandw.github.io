@@ -1,5 +1,5 @@
 ---
-title: "NZ Space Ecosystem — Talk"
+title: "StarLeak — Talk"
 date: 2026-07-31
 pdf: /assets/slides/SpaceInstrument.pdf
 ---
