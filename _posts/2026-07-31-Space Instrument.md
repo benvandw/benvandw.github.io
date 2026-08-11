@@ -1,6 +1,6 @@
 ---
 title: "NZ Space Ecosystem — Talk"
-date: 2026-08-11
+date: 2026-07-31
 pdf: /assets/slides/SpaceInstrument.pdf
 ---
 
