@@ -2,8 +2,6 @@
 layout: default
 title: Events
 ---
-
-## Events
 <div class="timeline">
 
   <div class="timeline-entry">
