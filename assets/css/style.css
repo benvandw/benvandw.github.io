@@ -77,7 +77,11 @@ footer {
   font-size: 0.85em;
   color: #767676;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 blockquote {
   border-left: 3px solid #ccc;
   margin-left: 0;
