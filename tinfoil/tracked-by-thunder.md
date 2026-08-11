@@ -47,7 +47,7 @@ Lightning itself is also routinely geolocated. Distributed lightning networks me
 
 Just the other day Youtuber Colsto published a video where they put this idea into practice, This was what inspired me to do this writeup
 
-<p align="center"><img src="/assets/img/Colsto-Thunder1.jpg" alt="Colsto(YT)'s Video excerpt geolocating thunder'" class="footer-img"></p>
+<p align="center"><img src="assets/img/Colsto-Thunder1.jpg" alt="Colsto(YT)'s Video excerpt geolocating thunder'" class="footer-img"></p>
 
 The interesting question is:
 
