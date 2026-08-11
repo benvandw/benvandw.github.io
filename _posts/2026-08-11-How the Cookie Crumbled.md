@@ -1,5 +1,3 @@
-# How the Cookie Crumbled
-
 This "baby's first" write-up covers my first public vulnerability discovery,
 In July 2026 on a third party service vendor platform ("The Vendor").
 Identifying information has been substituted for privacy.
