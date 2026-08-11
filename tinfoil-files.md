@@ -26,7 +26,7 @@ Every file tries to answer three questions:
 
 ## Files
 
-### [#001 — Tracked by Thunder](/tracked-by-thunder)
+### [#001 — Tracked by Thunder](/tinfoil/tracked-by-thunder)
 
 Your microphone may be recording more than speech.
 
