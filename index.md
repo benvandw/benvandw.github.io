@@ -27,4 +27,7 @@ write about whatever I've broken or fixed that week.
   </li>
 {% endfor %}
 </ul>
+
+---
+
 <p align="center"><img src="/assets/img/sar.jpg" alt="Spacecraft above Earth" class="footer-img"></p>
