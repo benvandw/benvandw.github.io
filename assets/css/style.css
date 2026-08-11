@@ -134,7 +134,7 @@ blockquote {
   .timeline-entry::before { background: #8ab4f8; }
 }
 
-hero {
+.hero {
   position: relative;
   left: 50%;
   width: 100vw;
