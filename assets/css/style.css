@@ -129,3 +129,44 @@ blockquote {
   .timeline { border-left-color: #333; }
   .timeline-entry::before { background: #8ab4f8; }
 }
+/* Hero: dark "space" panel with a small earth-limb curve
+   tucked into the bottom-left corner. */
+.hero {
+  background: #07070a;
+  margin: -40px -20px 2em;
+  padding: 24px 20px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero nav a {
+  color: #f2e9d8;
+  position: relative;
+  z-index: 2;
+}
+
+.earthrise {
+  position: absolute;
+  inset: 0;
+}
+
+.earthrise .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.earthrise .earth {
+  position: absolute;
+  bottom: -100px;
+  left: -70px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #0c2a4a;
+  border: 2px solid #4a7fad;
+}
