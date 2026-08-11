@@ -5,8 +5,6 @@ permalink: /tinfoil-files
 description: Weird, uncomfortable and occasionally ridiculous ways technology can reveal more than you expect.
 ---
 
-# Tinfoil Files
-
 > Research Experiments and tools that make you want to knit tinfoil into your hat
 
 Some of these stories sound completely ridiculous.
