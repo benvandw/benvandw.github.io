@@ -9,12 +9,20 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/index.xml' | relative_url }}">
 </head>
 <body>
-  <header>
+  <header class="hero">
     <nav>
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/events' | relative_url }}">Events</a>
       <a href="{{ '/index.xml' | relative_url }}">RSS</a>
     </nav>
+    <div class="earthrise" aria-hidden="true">
+      <span class="star" style="top:20px; left:15%;"></span>
+      <span class="star" style="top:50px; left:40%;"></span>
+      <span class="star" style="top:24px; left:75%;"></span>
+      <span class="star" style="top:80px; left:92%;"></span>
+      <span class="star" style="top:120px; left:25%;"></span>
+      <div class="earth"></div>
+    </div>
   </header>
 
   <main>
@@ -23,7 +31,7 @@
 
   <footer>
     <hr>
-    <p>Made with <a href="https://jekyllrb.com">Jekyll</a>,Hosted on GitHub Pages.</p>
+    <p>Made with <a href="https://jekyllrb.com">Jekyll</a>, styled bear-blog-simple. Hosted on GitHub Pages.</p>
   </footer>
 </body>
 </html>
