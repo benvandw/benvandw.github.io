@@ -35,11 +35,11 @@ So we have two things:
 
 That is where this gets interesting.
 
-## This is reality
+## The Science
 
-The underlying science is well established.
+Acoustic localization of thunder has been demonstrated experimentally. 
 
-Acoustic localization of thunder has been demonstrated experimentally. In 2011, researchers used acoustic arrays to locate thunder produced by triggered lightning and compared the results with a Lightning Mapping Array.
+In 2011, researchers used acoustic arrays to locate thunder produced by triggered lightning and compared the results with a Lightning Mapping Array.
 
 More recently, researchers demonstrated three-dimensional thunder-source localization using distributed acoustic sensing on a 7.7 km telecommunications fibre cable, treating thousands of points along the fibre as sensors.
 
@@ -53,11 +53,9 @@ The interesting question is:
 
 > **"How much location information can an ordinary recording leak when its environmental audio is correlated with external datasets?"**
 
-That's the Tinfoil Files question.
-
 ## The important caveat
 
-I would **not** claim that every livestream can simply be dropped into a lightning database and instantly geolocated.
+I would **not** support a claim that every livestream can be dropped into a lightning database and geolocated.
 
 Real-world accuracy depends on things such as:
 
@@ -72,10 +70,10 @@ Real-world accuracy depends on things such as:
 ## Tinfoil rating
 
 **4/5 — Uncomfortable**
+Not a great feeling to come out of a video with considering how much we already have to think before we post.
 
 The individual components are established scientific techniques.
 
-The interesting security leap is combining them.
 Sometimes the information you leak is something that happened around you.
 
 Check out the original video from Colsto where they unpack a bit more of the science and did the Mahi to establish a proof of concept
@@ -93,8 +91,8 @@ Check out the original video from Colsto where they unpack a bit more of the sci
 
 ## Further Reading 
 For more unbeliveable things people on the internet have done, check in for the next episode or have a look at these famous examples 
-[The time 4Chan found a flag using Aircraft trails in the sky](https://brobible.com/life/article/shia-labeouf-he-will-not-divide-us-flag-4chan/) 
-[HDMI Cables radiating whats on your screen](https://www.pcworld.com/article/2413156/hackers-can-wirelessly-watch-your-screen-via-hdmi-radiation.html)
+- [The time 4Chan found a flag using Aircraft trails in the sky](https://brobible.com/life/article/shia-labeouf-he-will-not-divide-us-flag-4chan/) 
+- [HDMI Cables radiating whats on your screen](https://www.pcworld.com/article/2413156/hackers-can-wirelessly-watch-your-screen-via-hdmi-radiation.html)
 - Arechiga, R. O., Johnson, J. B., Edens, H. E., Thomas, R. J., & Rison, W. (2011). *Acoustic localization of triggered lightning*. Journal of Geophysical Research: Atmospheres. https://doi.org/10.1029/2010JD015248
 - Hong, H., Wang, B., Lu, G., Li, X., et al. (2024). *Tracking Lightning Through 3D Thunder Source Location With Distributed Acoustic Sensing*. Journal of Geophysical Research: Atmospheres. https://doi.org/10.1029/2023JD038882
 - Blitzortung / LightningMaps documentation: https://docs.lightningmaps.org/general/
