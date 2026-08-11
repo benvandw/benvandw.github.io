@@ -133,7 +133,7 @@ blockquote {
   .timeline { border-left-color: #333; }
   .timeline-entry::before { background: #8ab4f8; }
 }
-
+/* Hero and Top of page content */
 .hero {
   position: relative;
   left: 50%;
@@ -181,4 +181,31 @@ blockquote {
   background: #ffffff;
   opacity: 0.5;
   border-radius: 50%;
+}
+
+/* PDF embed for talk/slide posts */
+.pdf-embed {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 1.5em 0 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pdf-embed { border-color: #333; }
+}
+
+.pdf-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-fallback {
+  font-size: 0.85em;
+  color: #767676;
 }
