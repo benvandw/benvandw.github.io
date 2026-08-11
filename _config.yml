@@ -1,11 +1,11 @@
 title: "Your Epic Blog"
 description: "A minimal bear-style blog"
-url: "https://benvandw.github.io"
-baseurl: "/Blog"
+url: "https://vandw.xyz"
+baseurl: ""
 
 # Author info (shown on homepage, optional)
-author: "Your Name"
-tagline: "A programmer from New Zealand."
+author: "Ben"
+tagline: "Cyber Security Engineering"
 
 # Markdown / build settings
 markdown: kramdown
