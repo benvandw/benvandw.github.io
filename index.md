@@ -4,9 +4,13 @@ title: Home
 ---
 # Hey, I'm Ben
 I'm a cybersecurity engineering student and Researcher in Wellington, New Zealand,
-currently working on satellite security — I'm Deputy Director of
+currently working on satellite security 
+
+I'm Deputy Director of
 [Project Kororā](https://projectkorora.space), VUW's first student-led CubeSat
-initiative. My interest is in satellite security: how these
+initiative.
+
+My interest is in satellite security: how these
 systems get attacked, and how you'd actually defend something with
 no physical access and a painfully thin power/comms budget.
 
