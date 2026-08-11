@@ -7,7 +7,7 @@ title: Home
 
 I'm a cybersecurity engineering student and Researcher in Wellington, New Zealand,
 currently working on satellite security — I'm Deputy Director of
-[Project Kororā](https://example.com), VUW's first student-led CubeSat
+[Project Kororā](https://projectkorora.space), VUW's first student-led CubeSat
 initiative. My interest is in satellite security: how these
 systems get attacked, and how you'd actually defend something with
 no physical access and a painfully thin power/comms budget.
@@ -27,3 +27,4 @@ write about whatever I've broken or fixed that week.
   </li>
 {% endfor %}
 </ul>
+<p align="center"><img src="/assets/img/sar.jpg" alt="Spacecraft above Earth" class="footer-img"></p>
