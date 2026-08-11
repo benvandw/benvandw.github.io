@@ -1,0 +1,40 @@
+title: "Your Epic Blog"
+description: "A minimal bear-style blog"
+url: "https://benvandw.github.io"
+baseurl: "/Blog"
+
+# Author info (shown on homepage, optional)
+author: "Your Name"
+tagline: "A programmer from New Zealand."
+
+# Markdown / build settings
+markdown: kramdown
+permalink: /:title
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Jekyll plugins GitHub Pages supports natively (no Actions needed)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+feed:
+  path: index.xml   # matches mrbruh.com's /index.xml RSS convention
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
