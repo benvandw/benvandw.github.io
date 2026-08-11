@@ -14,6 +14,7 @@ Outside of that I run a homelab, tinker with random tech, and occasionally
 write about whatever I've broken or fixed that week.
 
 Get in Touch 
+
 Signal : ajax.405
 
 Email : ben[at]vandw[dot]xyz
