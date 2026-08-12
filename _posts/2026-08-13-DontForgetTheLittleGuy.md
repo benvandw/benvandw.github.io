@@ -1,7 +1,7 @@
 ---
 title: "Don't Forget the Little Guy — Talk"
 date: 2026-08-13
-pdf: /assets/slides/DontForgetTheLittleGuy.pdf
+pdf: assets/slides/DontForgetTheLittleGuy.pdf
 ---
 
 A talk on International Space treaties, Approaches to cybersecurity accountability in space,and a couple notable examples
