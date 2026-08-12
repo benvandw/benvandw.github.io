@@ -1,5 +1,5 @@
 ---
-title: "How the Cookie Crumbled — Write-Up"
+title: "How the Cookie Crumbled — Write Up"
 date: 2026-08-11
 ---
 
