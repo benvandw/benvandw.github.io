@@ -6,7 +6,7 @@ title: Events
 
   <div class="timeline-entry">
     <span class="timeline-date">July 28 2026</span>
-    <h3>HTB 0x22t</h3>
+    <h3>HTB 0x22</h3>
     <p>How to get into Legal Cyber Research.</p>
   </div>
 
