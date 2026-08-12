@@ -1,6 +1,6 @@
 ---
 title: "Don't Forget the Little Guy — Talk"
-date: 2026-08-13
+date: 2026-08-12
 pdf: assets/slides/DontForgetTheLittleGuy.pdf
 ---
 
