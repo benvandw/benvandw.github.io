@@ -12,4 +12,4 @@ title: Now
 - I'm now about a third of the way through my [HTB Certified Defensive Security Analyst](https://academy.hackthebox.com/preview/certifications/htb-certified-defensive-security-analyst)
 - I'll be around during open day on Friday! [What's open day ?](https://www.wgtn.ac.nz/study/events-visits/open-day) Come say Hi, I'll be at the ECS booth and doing some talks for new students.
 - Tinkering with the home lab as per usual (onto IDS/IPS configs now)
-<p class="post-meta">This is a <a href="https://nownownow.com/about">now page</a> — a snapshot, not a to-do list. It'll look different next time you check.</p>
+<p class="post-meta">This is a <a href="https://nownownow.com/about">now page</a> — a snapshot of what I'm up to. It'll look different next time you check.</p>
