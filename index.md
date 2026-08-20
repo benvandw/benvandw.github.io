@@ -4,7 +4,7 @@ title: Home
 ---
 # Hey, I'm Ben
 I'm a cybersecurity engineering student and Researcher in Wellington, New Zealand,
-currently working on satellite security 
+currently working on some satellite security in my free time.
 
 I'm Deputy Director of
 [Project Kororā](https://projectkorora.space), VUW's first student-led CubeSat
@@ -17,11 +17,13 @@ no physical access and a painfully thin power/comms budget.
 Outside of that I run a homelab, tinker with random tech, and occasionally
 write about whatever I've broken or fixed that week.
 
+Check out what I'm up to **[Now](https://vandw.xyz/now)**
+
 Get in Touch 
 
 Signal : ajax.405
 
-Email : ben[at]vandw[dot]xyz
+Email : ben[at]vandw.xyz
 
 ---
 
