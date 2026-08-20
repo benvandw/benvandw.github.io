@@ -5,14 +5,14 @@ layout: default
   <p class="post-meta">{{ page.date | date: "%-d %B %Y" }}</p>
 
   {{ content }}
-
+ <p class="pdf-fallback">
+    <a href="{{ page.pdf | relative_url }}">Open the slides directly (PDF)</a>
+    — more reliable on mobile, where embedded PDF viewers can be flaky.
+  </p>
   {% if page.pdf %}
   <div class="pdf-embed">
     <iframe src="{{ page.pdf | relative_url }}" title="{{ page.title }} slides"></iframe>
   </div>
-  <p class="pdf-fallback">
-    <a href="{{ page.pdf | relative_url }}">Open the slides directly (PDF)</a>
-    — more reliable on mobile, where embedded PDF viewers can be flaky.
-  </p>
+ 
   {% endif %}
 </article>
