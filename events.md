@@ -10,6 +10,12 @@ title: Events
     <p>AI Pen-testing, LLM Vulnerabilities and TTPs</p>
   </div>
 
+ <div class="timeline-entry">
+    <span class="timeline-date">Aug 2026</span>
+    <h3>Project Wednesday</h3>
+    <p>Networking at Bastion Security and how the industry is changing</p>
+  </div>
+  
   <div class="timeline-entry">
     <span class="timeline-date">July 28 2026</span>
     <h3>HTB 0x22</h3>
