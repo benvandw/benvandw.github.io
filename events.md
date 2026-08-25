@@ -3,6 +3,12 @@ layout: default
 title: Events
 ---
 <div class="timeline">
+  
+ <div class="timeline-entry">
+    <span class="timeline-date">Aug 25 2026</span>
+    <h3>HTB 0x24</h3>
+    <p>AI Pen-testing, LLM Vulnerabilities and TTPs</p>
+  </div>
 
   <div class="timeline-entry">
     <span class="timeline-date">July 28 2026</span>
