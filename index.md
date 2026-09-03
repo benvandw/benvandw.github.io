@@ -17,7 +17,7 @@ no physical access and a painfully thin power/comms budget.
 Outside of that I run a homelab, tinker with random tech, and occasionally
 write about whatever I've broken or fixed that week.
 
-Check out what I'm up to **[Now](https://vandw.xyz/now)**
+Check out what I'm up to **[Now](https://vandw.xyz/now)** and how my [homelab](https://vandw.xyz/HomeLab) is going.
 
 Get in Touch 
 
