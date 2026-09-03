@@ -23,7 +23,7 @@ My devices are all supported via a 2.5Gb LAN network, a NAS, and a bunch of smar
 ## Home SOC
 
 My Home SOC is a bit of a passion project, running a ridiculously overkill stack for the number of devices being monitored.
-
+<p align="center"><img src="/assets/img/homelab-soc-architecture.png" alt="HomeLab Logical Layout"></p>
 All the tools, software and other bits and bobs are open source or open-source derived, thanks to [Catalyst IT](https://catalyst.net.nz) who encouraged me to stick with the community and who very generously gave me one of [3 Open Source Scholarships](https://www.catalyst.net.nz/candc-careers/candc-open-source-scholarships) this year!
 
 Down the road (once RAM prices go down or I can pick up another second-hand mini PC) I'm looking to add in the following tech!
@@ -40,4 +40,5 @@ Down the road (once RAM prices go down or I can pick up another second-hand mini
  - And I'm scoping out [Fleet](https://fleetdm.com/) for some slightly more turnkey fleet management to complement Wazuh and Ansible
  - If you have more ideas, let me know! My goal is to outperform some enterprise environments for no provider costs.
 
-<p align="center"><img src="/assets/img/homelab-soc-architecture.png" alt="Spacecraft above Earth"></p>
+
+<p align="center"><img src="/assets/img/planned-HomeLab.png" alt="HomeLab Future Layout"></p>
