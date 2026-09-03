@@ -3,12 +3,12 @@ layout: default
 title: Now
 ---
 
-*Last updated: 26 August 2026*
+*Last updated: 3rd September 2026*
 
-- Houston we have a favicon, The console error was annoying so the new (hopefully compatible) icon is up and running
-- Open day went great! was amazing to meet everyone and many thanks to the School of Engineering and computer Science for selecting me to speak about my experience as a Cyber security Engineer. [What's open day ?](https://www.wgtn.ac.nz/study/events-visits/open-day)
-- I'm now about a third of the way through my [HTB Certified Defensive Security Analyst](https://academy.hackthebox.com/preview/certifications/htb-certified-defensive-security-analyst)
-- Tinkering with the home lab as per usual (onto fixing up the IOT network and banning C2 callouts)
+- I'm still about a third of the way through my [HTB Certified Defensive Security Analyst](https://academy.hackthebox.com/preview/certifications/htb-certified-defensive-security-analyst)
+- I've just setup OpenCTI OpenAEV and a full (non ai based) N8N incident pipeline !
+- I've spent time digging into threat actors and TTPs trying to tie them in with OpenCTI and into my incident pipeline
+- Working on a new /homelab tab for this site ! with some info on what I've build and how I've done it !
 - Working on [Project Kororā](https://projectkorora.space/), VUW's Cube-Sat initiative
 - Researching satellite security practices in NZ
 - Going to [events](https://vandw.xyz/events)
