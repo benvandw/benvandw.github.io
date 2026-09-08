@@ -4,6 +4,12 @@ title: Events
 ---
 <div class="timeline">
   
+   <div class="timeline-entry">
+    <span class="timeline-date">Sept 06-11 2026</span>
+    <h3>European Planetary Sciences Congress</h3>
+    <p>International Space science Conference in the Netherlands, exclusive Access provided by VUW.</p>
+  </div>
+  
  <div class="timeline-entry">
     <span class="timeline-date">Aug 25 2026</span>
     <h3>HTB 0x24</h3>
