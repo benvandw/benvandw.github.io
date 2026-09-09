@@ -5,6 +5,12 @@ title: Events
 <div class="timeline">
   
    <div class="timeline-entry">
+    <span class="timeline-date">Sept 09 2026</span>
+    <h3>Bastion Security - Adversary emulation</h3>
+    <p>RedTeaming, pitfalls and more for enterprise pentesting.</p>
+  </div>
+  
+   <div class="timeline-entry">
     <span class="timeline-date">Sept 06-11 2026</span>
     <h3>European Planetary Sciences Congress</h3>
     <p>International Space science Conference in the Netherlands, exclusive Access provided by VUW.</p>
