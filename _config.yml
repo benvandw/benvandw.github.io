@@ -20,7 +20,7 @@ plugins:
   - jekyll-sitemap
 
 feed:
-  path: index.xml   # matches mrbruh.com's /index.xml RSS convention
+  path: index.xml
 
 defaults:
   - scope:
