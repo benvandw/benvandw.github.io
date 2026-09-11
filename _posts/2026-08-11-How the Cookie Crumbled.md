@@ -1,6 +1,6 @@
 ---
 title: "How the Cookie Crumbled — Write Up"
-date: 2026-08-10
+date: 2026-08-11
 ---
 
 This "baby's first" write-up covers my first public vulnerability discovery,
