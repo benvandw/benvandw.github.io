@@ -3,8 +3,9 @@ layout: default
 title: Now
 ---
 
-*Last updated: 7th September 2026*
+*Last updated: 23th September 2026*
 
+- It's been a busy couple weeks, I've been locking in on my homelab, Got the whole lab powered by a UPS system now and been working on more uni assignments ! The final stretch!
 - I've just been officially accepted into a [Masters of Engineering](https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-engineering/overview?programme=master-of-engineering-by-thesis-and-coursework) at VUW! where I hope to put my research to the test 
 - The [/homelab](https://vandw.xyz/HomeLab) page is live! with some ideas about future progress.
 - I'm still about a third of the way through my [HTB Certified Defensive Security Analyst](https://academy.hackthebox.com/preview/certifications/htb-certified-defensive-security-analyst)
